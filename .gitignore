@@ -1,0 +1,17 @@
+/x64
+/x86
+/.vs
+*.vs
+/Debug
+/FileContentIndex
+/v17
+*.vsidx
+*.lock
+*.sue
+*vs.db
+*.ipch
+*.vcxproj.filters
+*.vcxproj.user
+*/x64
+*/x86
+*/.vs
