@@ -35,9 +35,9 @@ private:
     double num2;
 };
 
-bool Calculator::set_num1(double num1) {
-    if (num1 != 0) {
-        this->num1 = num1;
+bool Calculator::set_num1(double _num1) {
+    if (_num1 != 0) {
+        num1 = _num1;
         return true;
     }
     else {
@@ -46,10 +46,10 @@ bool Calculator::set_num1(double num1) {
     }
 }
 
-bool Calculator::set_num2(double num2) 
+bool Calculator::set_num2(double _num2) 
 {
-    if (num2 != 0) {
-        this->num2 = num2;
+    if (_num2 != 0) {
+        num2 = _num2;
         return true;
     }
     else {
