@@ -13,13 +13,13 @@
 class Figure
 {
 public:
-    //Виртуальный метод возвращает название фигуры
+    //Метод возвращает название фигуры
     std::string get_name() { return name; };
-    //Виртуальный метод возвращает количество сторон фигуры
+    //Метод возвращает количество сторон фигуры
     int get_sides() { return num_of_sides; }
     //Виртуальный метод делает проверку на правильность фигуры
     virtual bool check() { return true; }
-    //Метод который ввыводит на консоль мнформацию о фигуре 
+    //Виртуальный метод который ввыводит на консоль информацию о фигуре 
     virtual void print_info() {
         std::cout << get_name() << ":" << std::endl; 
         if (check()) { std::cout << "Правильная" << std::endl; } else { std::cout << "Неправильная" << std::endl; }
@@ -51,7 +51,7 @@ public:
         if (A + B + C == 180) { return true; }
         else { return false; }
     }
-    //Ввывод информации о фигуре
+    //Вывод информации о фигуре
     void print_info() override{
         Figure::print_info();
         std::cout << "Стороны: a=" << get_a() << " b=" << get_b() << " c=" << get_c() << std::endl;
