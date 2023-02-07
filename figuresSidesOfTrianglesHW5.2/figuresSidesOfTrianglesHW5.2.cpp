@@ -2,13 +2,13 @@
 #include <string>
 #include <Windows.h>
 
-class Figure //Абстрактный класс Фигура
+class Figure //Базовый Класс Фигура
 {
 public:
     //Метод возвращает название фигуры
     std::string get_name() { return name;}
     //Виртуальный метод для вывода значений на экран
-    virtual void print_info(Figure* x) = 0;
+    virtual void printInfo() = 0;
     
 protected:
     std::string name = "Фигура";//Хранение название фигуры 
@@ -37,9 +37,9 @@ public:
     int get_C() { return C; };//Метод возвращает значение угла C
 
     //Переписанный метод для вывода значений на экран экземляров класса Треугольник
-    void print_info(Figure* x) override 
+    void printInfo() override 
     {
-        std::cout << x->get_name() << ":" << std::endl;
+        std::cout << get_name() << ":" << std::endl;
         std::cout << "Стороны: a=" << get_a() << " b=" << get_b() << " c=" << get_c() << std::endl;
         std::cout << "Углы: A=" << get_A() << " B=" << get_B() << " C=" << get_C() << std::endl;
         std::cout << std::endl;
@@ -117,9 +117,9 @@ public:
     int get_D() { return D; };//Метод возвращает значение угла D
 
     //Переписанный метод для вывода значений на экран экземляров класса Четырехугольник
-    void print_info(Figure* x) override
+    void printInfo() override
     {
-        std::cout << x->get_name() << ":" << std::endl;
+        std::cout << get_name() << ":" << std::endl;
         std::cout << "Стороны: a=" << get_a() << " b=" << get_b() << " c=" << get_c() << " d=" << get_d() << std::endl;
         std::cout << "Углы: A=" << get_A() << " B=" << get_B() << " C=" << get_C() << " D=" << get_D() << std::endl;
         std::cout << std::endl;
@@ -172,6 +172,11 @@ public:
         name = "Ромб";
     }
 };
+//Функция, выводит на экран значения, наследуемого класса от базового класса Фигуры
+void print_info(Figure* x) 
+{
+    x->printInfo();
+}
 
 
 int main()
@@ -183,30 +188,30 @@ int main()
 
     //Экземпляр класса треугольник
     Triangle t(10, 20, 30, 50, 60, 70);
-    t.print_info(&t);
+    print_info(&t);
     //Экземпляр класса прямоугольний треугольник
     RightTriangle rt(10, 20, 30, 50, 60);
-    rt.print_info(&rt);
+    print_info(&rt);
     //Экземпляр класса равнобедренный треугольник
     IsoscelesTriangle i(10, 20, 50, 60);
-    i.print_info(&i);
+    print_info(&i);
     //Экземпляр класса равносторонний треугольник
     EquilateralTriangle e(30);
-    e.print_info(&e);
+    print_info(&e);
     //Экземпляр класса четырехугольник
     Quadrangle q(10, 20, 30, 40, 50, 60, 70, 80);
-    q.print_info(&q);
+    print_info(&q);
     //Экземпляр класса прямоугольник
     RectangleF rf(10, 20);
-    rf.print_info(&rf);
+    print_info(&rf);
     //Экземпляр класса квадрат
     Square s(20);
-    s.print_info(&s);
+    print_info(&s);
     //Экземпляр класса параллелограмм
     Parallelogram p(20, 30, 30, 40);
-    p.print_info(&p);
+    print_info(&p);
     //Экземпляр класса ромб
     Rhomb romb(30, 30, 40);
-    romb.print_info(&romb);
+    print_info(&romb);
 }
 
