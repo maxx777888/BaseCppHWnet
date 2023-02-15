@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ee01f829-5ee4-4609-a4c7-0acc8e469708}</ProjectGuid>
-    <RootNamespace>classHierarchyHW63</RootNamespace>
+    <ProjectGuid>{227b32b6-9442-4473-b336-1706497305bd}</ProjectGuid>
+    <RootNamespace>constructExpHW82</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,8 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="classHierarchyHW6.3.cpp" />
+    <ClCompile Include="constructExpHW8.2.cpp" />
     <ClCompile Include="EquilateralTriangle.cpp" />
+    <ClCompile Include="ExcClass.cpp" />
     <ClCompile Include="Figure.cpp" />
     <ClCompile Include="IsoscelesTriangle.cpp" />
     <ClCompile Include="Parallelogram.cpp" />
@@ -141,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EquilateralTriangle.h" />
+    <ClInclude Include="ExcClass.h" />
     <ClInclude Include="Figure.h" />
     <ClInclude Include="IsoscelesTriangle.h" />
     <ClInclude Include="Parallelogram.h" />
