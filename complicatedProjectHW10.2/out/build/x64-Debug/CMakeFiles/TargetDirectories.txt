@@ -1,0 +1,3 @@
+C:/Users/NOTEBOOK/Desktop/HW_Git/complicatedProjectHW10.2/out/build/x64-Debug/CMakeFiles/compProject10.1.dir
+C:/Users/NOTEBOOK/Desktop/HW_Git/complicatedProjectHW10.2/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/NOTEBOOK/Desktop/HW_Git/complicatedProjectHW10.2/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
